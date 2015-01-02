@@ -6,9 +6,9 @@
 	/* ServletContext context = request.getSession().getServletContext(); */
 	String approbationNumber = (String)request.getParameter("approbationNumber");
 	String orderNumber = (String)request.getParameter("orderNumber");
-	/* System.out.println("approbationNumber: " + approbationNumber);
+	System.out.println("approbationNumber: " + approbationNumber);
 	System.out.println("orderNumber: " + orderNumber);
-	System.out.println("# Elementos3: " + SessionManager.getInstance().hashMapSessions.size()); */
+	/*System.out.println("# Elementos3: " + SessionManager.getInstance().hashMapSessions.size()); */
 	SessionManager.getInstance().setAutorizationNumber(orderNumber, approbationNumber);
 	OrderVO orderVO = new OrderVO();
 	orderVO.setOrderID(orderNumber);

@@ -15,7 +15,7 @@
 			$("#msgid").load("paymentReceived.jsp");	
 		}, 2000);
 		
-		myWindow = window.open("","VentanaPago", "width=500, height=500");
+		myWindow = window.open("","VentanaPago", "fullscreen=yes,scrollbars=yes");
 	    $("#formID").submit();
 	}
 	
@@ -24,7 +24,7 @@
 	ObjectVO objectVO = (ObjectVO)session.getAttribute("objectVO");
 %>
 <body>	
-	<form id="formID" action="http://192.168.0.7:8081/web/paymentsite" target = "VentanaPago" method="post">
+	<form id="formID" action="http://portal.billingbuddy.com/web/paymentsite" target = "VentanaPago" method="post">
 		<table border="1">
 			<tr>
 				<td colspan="2" align="center">

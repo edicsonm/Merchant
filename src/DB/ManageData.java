@@ -20,6 +20,10 @@ public class ManageData {
 			conn =
 		       DriverManager.getConnection("jdbc:mysql://merchant.billingbuddy.com/Merchant?" +
 		                                   "user=root&password=Bulldog2014");
+		
+			/*conn =
+				       DriverManager.getConnection("jdbc:mysql://localhost/Merchant?" +
+				                                   "user=root&password=Bulldog2014");*/
 		} catch (SQLException ex) {
 		    System.out.println("SQLException: " + ex.getMessage());
 		    System.out.println("SQLState: " + ex.getSQLState());
