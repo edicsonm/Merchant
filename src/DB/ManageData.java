@@ -62,7 +62,7 @@ public class ManageData {
 		try {
 			cstmt = conn.prepareCall("{call Merchant.PROC_UPDATE_ORDER( ?, ?)}");
 			cstmt.setString(1, orderVO.getOrderID());
-			cstmt.setString(2, orderVO.getAutoID());
+			cstmt.setString(2, orderVO.getAutoID() != null ? orderVO.getAutoID(): "0");
 			status = cstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

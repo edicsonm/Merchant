@@ -3,13 +3,14 @@
 <%@ page import="DB.ManageData"%>
 <%@ page import="object.*"%>
 <%
-	/* ServletContext context = request.getSession().getServletContext(); */
 	String approbationNumber = (String)request.getParameter("approbationNumber");
 	String orderNumber = (String)request.getParameter("orderNumber");
 	System.out.println("approbationNumber: " + approbationNumber);
 	System.out.println("orderNumber: " + orderNumber);
-	/*System.out.println("# Elementos3: " + SessionManager.getInstance().hashMapSessions.size()); */
-	SessionManager.getInstance().setAutorizationNumber(orderNumber, approbationNumber);
+	RespuestaVO respuestaVO = new RespuestaVO();
+	respuestaVO.setOrderNumber(orderNumber);
+	respuestaVO.setApprobationNumber(approbationNumber);
+	SessionManager.getInstance().setAutorizationNumber(orderNumber, respuestaVO);
 	OrderVO orderVO = new OrderVO();
 	orderVO.setOrderID(orderNumber);
 	orderVO.setAutoID(approbationNumber);
@@ -19,8 +20,4 @@
 	if(answer != 1) {
 		response.sendError(999,"Wasn't possible save the information");
 	}
-	/* if(approbationNumber != null ){
-			session.setAttribute("approbationNumber", approbationNumber);
-			System.out.println("answerProcesor.jsp --> Approbation Number Received " + approbationNumber + " on " + session.getId());
-	} */
 %>
