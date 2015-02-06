@@ -3,8 +3,8 @@
 <%@ page import="object.RespuestaVO"%>
 <%
 	RespuestaVO respuestaVO = SessionManager.getInstance().getAutorizationNumber((String)session.getAttribute("orderID"));
-	System.out.println("Buscando orderID #..." + (String)session.getAttribute("orderID") + " --> " +respuestaVO);
-	System.out.println("respuestaVO.getApprobationNumber()..." + respuestaVO.getApprobationNumber());
+	//System.out.println("Buscando orderID #..." + (String)session.getAttribute("orderID") + " --> " +respuestaVO);
+	//System.out.println("respuestaVO.getApprobationNumber()..." + respuestaVO.getApprobationNumber());
 	/* System.out.println("Charging..." + session.getId());
 	String approbationNumber = (String)session.getAttribute("approbationNumber"); */
 	if(respuestaVO != null && respuestaVO.getApprobationNumber() != null) {

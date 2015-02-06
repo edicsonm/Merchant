@@ -3,6 +3,7 @@
 <%@ page import="DB.ManageData"%>
 <%@ page import="object.*"%>
 <%
+	System.out.println("Ejecuta pagina XXXXXXXXXXXXXXXX");
 	String approbationNumber = (String)request.getParameter("approbationNumber");
 	String orderNumber = (String)request.getParameter("orderNumber");
 	System.out.println("approbationNumber: " + approbationNumber);

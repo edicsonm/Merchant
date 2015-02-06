@@ -40,7 +40,7 @@
 					MerchantID
 				</td>
 				<td>
-					<input id="merchantID" name="merchantID" type="text" value="826188362">
+					<input id="merchantID" name="merchantID" type="text" value="2">
 				</td>
 			</tr>
 			<tr>

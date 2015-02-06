@@ -13,5 +13,9 @@
  	System.out.print("respuestaVO.getApprobationNumber(): " + respuestaVO.getApprobationNumber());
  %>
  	We have received your payment under number <%= respuestaVO.getApprobationNumber() %>
+<form action="index.jsp">
+	<input type="submit" value="Start Again">
+</form>
+
 </body>
 </html>

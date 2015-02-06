@@ -18,5 +18,8 @@
 	out.print("message: " + respuestaVO.getMessage()+"<br>");
 	out.print("data: " + respuestaVO.getData()+"<br>");
 %>
+<form action="index.jsp">
+	<input type="submit" value="Start Again">
+</form>
 </body>
 </html>

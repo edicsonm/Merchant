@@ -9,4 +9,23 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>Approved</servlet-name>
+    <servlet-class>servlet.Approved</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Approved</servlet-name>
+    <url-pattern>/approved</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Rejected</servlet-name>
+    <servlet-class>servlet.Rejected</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Rejected</servlet-name>
+    <url-pattern>/rejected</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

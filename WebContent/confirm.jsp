@@ -25,7 +25,7 @@
 %>
 <body>	
 	<!-- <form id="formID" action="http://portal.billingbuddy.com/web/paymentsite" target = "VentanaPago" method="post"> -->
-	<form id="formID" action="http://192.168.0.6:8081/web/paymentsite" target = "VentanaPago" method="post">
+	<form id="formID" action="https://192.168.0.6/web/paymentsite" target = "VentanaPago" method="post">
 	
 		<table border="1">
 			<tr>
@@ -92,7 +92,7 @@
 			
 			<tr>
 				<td colspan="2" align="center">
-					<input type="button" value="Open Window" onclick="openWin();">
+					<input type="button" value="Send payment ..." onclick="openWin();">
 				</td>
 			</tr>
 		</table>
