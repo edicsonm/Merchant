@@ -1,4 +1,7 @@
 <%@page import="javax.naming.Context"%>
+<%@ page import="DB.ManageData"%>
+<%@ page import="object.MerchantVO"%>
+<%@ page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -9,7 +12,9 @@
 <script type="text/javascript">
 
 </script>
-<% 
+<%
+	ManageData manageData = new ManageData();
+	ArrayList<MerchantVO> listMerchant = (ArrayList<MerchantVO>)manageData.listMerchantWithCertificates();
 %>
 <body>
 	<form id="formID" action="sendPayment.jsp" method="post">
@@ -19,14 +24,6 @@
 					Merchant Site
 				</td>
 			</tr>
-			<!-- <tr>
-				<td>
-					Order Number
-				</td>
-				<td>
-					<input id="orderNumber" name="orderNumber" type="text" value="1003021">
-				</td>
-			</tr> -->
 			<tr>
 				<td>
 					Currency
@@ -40,7 +37,16 @@
 					MerchantID
 				</td>
 				<td>
-					<input id="merchantID" name="merchantID" type="text" value="2">
+					<select name="merchantID" id="merchantID">
+						<% 
+							for(int i =0; i<listMerchant.size();i++){
+								MerchantVO merchantVO = (MerchantVO)listMerchant.get(i);
+								%>
+									<option value="<%=merchantVO.getIdMerchant() %>"><%=merchantVO.getNameMerchant()%></option>
+								<%
+							}
+						%>
+					</select>
 				</td>
 			</tr>
 			<tr>
@@ -57,6 +63,10 @@
 				</td>
 			</tr>
 		</table>
+	</form>
+	<br/><br/><br/><br/>
+	<form action="upload.jsp">
+		<input type="submit" value="Go to configure Certificate ...">
 	</form>
 </body>
 </html>

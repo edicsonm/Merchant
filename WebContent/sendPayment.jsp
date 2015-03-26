@@ -27,7 +27,9 @@
 			String value = orderVO.getOrderID()+currency+merchantID+transactionAmount;
 			ProcesarRequest procesarRequest = new ProcesarRequest();
 			String sha1Value = procesarRequest.sha1Calculator(value);
-			String signSha1 = procesarRequest.signSha1(sha1Value);
+			System.out.println("merchantID: " + merchantID);
+			System.out.println("sha1Value: " + sha1Value);
+			String signSha1 = procesarRequest.signSha1(merchantID,application.getInitParameter("file-upload"), sha1Value);
 			
 			ObjectVO objectVO = new ObjectVO();
 			objectVO.setCurrency(currency);

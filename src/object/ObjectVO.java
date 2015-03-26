@@ -1,7 +1,13 @@
 package object;
 
-public class ObjectVO {
+import java.io.Serializable;
 
+public class ObjectVO implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7162204331009571226L;
 	private String orderNumber;
 	private String currency;
 	private String merchantID;

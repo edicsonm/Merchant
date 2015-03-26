@@ -43,13 +43,13 @@ public class Approved extends HttpServlet {
 		orderVO.setAutoID(approbationNumber);
 		ManageData manageData = new ManageData();
 		int answer = manageData.updateOrder(orderVO);
-		System.out.println("Respuesta: " + answer);
+		System.out.println("\nRespuesta: " + answer);
 		
 		response.setContentType("text/javascript");
         response.setHeader("Cache-Control", "no-store");
         final PrintWriter out = response.getWriter();
         String respuesta;
-		if(answer != 1) {
+		if(answer == 1) {
 			respuesta = generaJSONRegistrada();
 			respuesta = callback + "(" + respuesta +");";
 			out.write(respuesta);
@@ -82,6 +82,7 @@ public class Approved extends HttpServlet {
         json.put("nombre", "prueba");
         json.put("tipo", "Cross-domain");
         json.put("parametro", parametro);
+        System.out.println("generaJSON json.toJSONString(): " + json.toJSONString());
         return json.toJSONString();
     }
     
@@ -90,6 +91,7 @@ public class Approved extends HttpServlet {
         json.put("date", Calendar.getInstance().getTimeInMillis());
         json.put("status", "processed");
         json.put("confirmationNumber",  (int)(new Random().nextDouble() * 10000));
+        System.out.println("generaJSONRegistrada json.toJSONString(): " + json.toJSONString());
         return json.toJSONString();
     }
     

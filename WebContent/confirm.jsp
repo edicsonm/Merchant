@@ -24,8 +24,10 @@
 	ObjectVO objectVO = (ObjectVO)session.getAttribute("objectVO");
 %>
 <body>	
+	<form id="formID" action="http://www.portal.billingbuddy.com/web/guest/paymentpage" target = "VentanaPago" method="post">
+	<!-- <form id="formID" action="http://portal.billingbuddy.com/web/paymentbillingbuddy" target = "VentanaPago" method="post"> -->
 	<!-- <form id="formID" action="http://portal.billingbuddy.com/web/paymentsite" target = "VentanaPago" method="post"> -->
-	<form id="formID" action="https://192.168.0.6/web/paymentsite" target = "VentanaPago" method="post">
+	<!-- <form id="formID" action="https://billingbuddy/web/paymentsite" target = "VentanaPago" method="post"> -->
 	
 		<table border="1">
 			<tr>
