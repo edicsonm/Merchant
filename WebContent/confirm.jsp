@@ -14,8 +14,8 @@
 		setInterval(function(){
 			$("#msgid").load("paymentReceived.jsp");	
 		}, 2000);
-		myWindow = window.open("","VentanaPago", "fullscreen=yes,scrollbars=yes");
-		/* myWindow = window.open("","VentanaPago", "directories=yes,titlebar=yes,toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes"); */
+		myWindow = window.open("","VentanaPago", "resizable=0,scrollbars=yes,width=500, height=500");
+		/*myWindow = window.open("","VentanaPago", "directories=yes,titlebar=yes,toolbar=yes,location=yes,status=yes,menubar=yes,scrollbars=yes,width=500, height=500");*/
 	    $("#formID").submit();
 	}
 	
@@ -23,11 +23,9 @@
 <% 
 	ObjectVO objectVO = (ObjectVO)session.getAttribute("objectVO");
 %>
-<body>	
-	<form id="formID" action="http://www.portal.billingbuddy.com/web/guest/paymentpage" target = "VentanaPago" method="post">
-	<!-- <form id="formID" action="http://portal.billingbuddy.com/web/paymentbillingbuddy" target = "VentanaPago" method="post"> -->
-	<!-- <form id="formID" action="http://portal.billingbuddy.com/web/paymentsite" target = "VentanaPago" method="post"> -->
-	<!-- <form id="formID" action="https://billingbuddy/web/paymentsite" target = "VentanaPago" method="post"> -->
+<body>
+	<!-- <form id="formID" action="http://www.portal.billingbuddy.com/web/guest/paymentpage" target = "VentanaPago" method="post"> -->
+	<form id="formID" action="http://www.portal.billingbuddy.com/web/billingbuddy/paymentpage" target = "VentanaPago" method="post">
 	
 		<table border="1">
 			<tr>
